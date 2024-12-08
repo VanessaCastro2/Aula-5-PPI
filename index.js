@@ -52,7 +52,7 @@ function cadastroUsuarioView(req, resp) {
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="/baterPapo">Sala de Bate-Papo</a>
+                                    <a class="nav-link active" aria-current="page" href="/baterPapo">Sala de Bate Papo</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="/logout">Sair</a>
@@ -161,9 +161,6 @@ function batePapoView2(req, resp) {
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="/cadastrarUsuario">Cadastrar Usuário</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/logout">Sair</a>
                             </li>
                         </ul>
                     </div>

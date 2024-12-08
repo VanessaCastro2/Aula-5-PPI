@@ -12,12 +12,12 @@ app.use(session({
     secret: 'M1nh4Chav3S3cr3t4',
     resave: false,
     saveUninitialized: true,
-    cookie: {
-      secure: process.env.NODE_ENV === 'production', // Ativa modo seguro só em produção
-      httpOnly: true,
-      maxAge: 1000 * 60 * 30
+    cookie:{
+        secure: false,
+        httpOnly: true,
+        maxAge: 1000 * 60 * 30
     }
-  }));
+}));
 
 app.use(cookieParser());
 

@@ -11,13 +11,13 @@ const app = express();
 app.use(session({
     secret: 'M1nh4Chav3S3cr3t4',
     resave: false,
-    saveUninitialized: false,
-    cookie: {
-      secure: process.env.NODE_ENV === 'production',
-      httpOnly: true,
-      maxAge: 1000 * 60 * 30
+    saveUninitialized: true,
+    cookie:{
+        secure: false,
+        httpOnly: true,
+        maxAge: 1000 * 60 * 30
     }
-  }));
+}));
 
 app.use(cookieParser());
 

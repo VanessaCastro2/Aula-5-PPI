@@ -11,13 +11,13 @@ const app = express();
 app.use(session({
     secret: 'M1nh4Chav3S3cr3t4',
     resave: false,
-    saveUninitialized: true,
-    cookie:{
-        secure: false,
-        httpOnly: true,
-        maxAge: 1000 * 60 * 30
+    saveUninitialized: false,
+    cookie: {
+      secure: process.env.NODE_ENV === 'production',
+      httpOnly: true,
+      maxAge: 1000 * 60 * 30
     }
-}));
+  }));
 
 app.use(cookieParser());
 
@@ -161,6 +161,9 @@ function batePapoView2(req, resp) {
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="/cadastrarUsuario">Cadastrar Usuário</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/logout">Sair</a>
                             </li>
                         </ul>
                     </div>
